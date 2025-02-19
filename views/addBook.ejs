@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="add note">
+
+        <p>Note: To find ISBN go to <a href="https://openlibrary.org">Open Libray</a>.</p>
+        <% if (locals.update) { %>
+            <form action="/submit/<%= update.id %>" class="add" method="post" id="form">
+                <div>
+                    <textarea name="content" placeholder="<%= update.content %>" class="area"></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        <% } else { %>
+            <form action="/submit" class="add" method="post" id="form">
+                <div>
+                    <input type="text" name="title" placeholder="Title" required>
+                    <input type="text" name="isbn" placeholder="ISBN #" required>
+                    <textarea name="content" placeholder="What did you think about this book?" class="area" required></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        <% } %>
+    </div>
+
+</body>
+</html>

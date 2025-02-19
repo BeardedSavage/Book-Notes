@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="note">
+        <ul class="content">
+            <% content.forEach((post) => { %>
+                <li class="books">
+                    <img src="https://covers.openlibrary.org/b/isbn/<%= post.isbn %>-L.jpg" alt="book cover">
+                    <div class="booknotes">
+                           <h2><%= post.title %></h2>
+                           <p><%= post.content %></p>
+                        <div class="buttons">
+                            <a href="/edit/<%= post.id %>" id="update">Update</a>
+                            <a href="/delete/<%= post.id %>" id="delete">Delete</a>
+                        </div>
+                    </div>
+                </li>
+                <hr />
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

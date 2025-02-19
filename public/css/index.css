@@ -1,0 +1,107 @@
+/* Color Theme is: 
+#303841,
+#3A4750,
+#F6C90E,
+#EEEEEE */
+
+body {
+    background-color: #3A4750;
+    background-attachment: fixed;
+    margin: 0;
+    color: #EEEEEE;
+    font-family: "Notable", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+hr {
+    width: 50%;
+}
+
+.header {
+    background-color: #303841;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: #EEEEEE;
+}
+
+.content {
+    background-color: #303841;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.books{
+    display: grid;
+    grid-template-columns: minmax(0, 25rem) minmax(25rem, 100vw);
+    padding: 1rem;
+}
+
+.booknotes {
+    font-family: "Federo", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+    font-stretch: expanded;
+    justify-self: center;
+}
+
+.note>p {
+    text-align: center;
+    font-style: italic;
+}
+
+.note>p>a {
+    text-decoration: none;
+    color:#F6C90E;
+}
+
+#update {
+    background-color: green;
+    padding: 1rem;
+}
+
+#delete {
+    background-color: maroon;
+    padding: 1rem;
+}
+
+#form>div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#form>div>* {
+    border: none;
+    text-align: center;
+}
+
+#form>div>button {
+    background-color: #F6C90E;
+    border: none;
+}
+
+#form>div>button:hover {
+    cursor: pointer;
+}
+
+.area {
+    height: 50rem;
+    width: 100rem;
+}
